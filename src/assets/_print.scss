@@ -1,0 +1,35 @@
+@page {
+  //   margin: 1cm;
+  size: A4;
+  margin: 0mm;
+}
+page[size="A4"] {
+  width: 21cm;
+  height: 29.7cm;
+}
+
+page[size="A4"][layout="portrait"] {
+  width: 29.7cm;
+  height: 21cm;
+}
+
+body {
+  -webkit-print-color-adjust: exact;
+}
+
+@media print {
+  .user-info {
+    width: 7cm;
+    page-break-before: always;
+  }
+  .details {
+    width: 13cm;
+  }
+  .page-break {
+    height: 0;
+    page-break-before: always;
+    margin: 1em auto;
+    border-top: none;
+    padding: 1.6em 0;
+  }
+}

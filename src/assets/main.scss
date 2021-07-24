@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+
+@import "~reset-css/sass/reset";
+@import "print.scss";
+
+.debug {
+  border: 1px solid red;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+$base-font-size: 1rem;
+h1 {
+  font-size: $base-font-size * 2;
+}
+h2 {
+  font-size: $base-font-size + 0.5rem;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+strong {
+  font-weight: 700 !important;
+}
+
+.pseudo-block {
+  content: "";
+  display: block;
+}
+
+.app-container {
+  /* background: hsl(30,90%,98%); */
+  max-width: 64rem;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 18.75rem auto;
+}
+
+.title {
+  font-size: $base-font-size + 0.2;
+  &:after {
+    @extend .pseudo-block;
+    height: 0;
+    border-bottom: 1px solid #6077f5;
+    margin: 0.5rem 0 1rem;
+  }
+}
+.subtitle {
+  font-size: $base-font-size + 0.2;
+}
+
+.name {
+  border-bottom: 1px solid #6077f5;
+  color: #6077f5;
+  font-weight: bold;
+  font-size: $base-font-size * 2.2;
+}
+.position {
+  font-size: $base-font-size + 0.5;
+}
+
+.user-info {
+  background-color: #2a2a72;
+  background-image: linear-gradient(90deg, #133783 0%, #3b5998 74%);
+
+  padding: 1rem 1rem 1rem 2.5rem;
+  color: #fff;
+  //   border-right: 1px solid #000;
+  .name {
+    color: inherit;
+  }
+
+  .user-thumb {
+    max-width: 12rem;
+    margin: auto;
+    overflow: hidden;
+    img {
+      border-radius: 50%;
+    }
+  }
+}
+
+.details {
+  padding: 1.87rem 3.75rem;
+  .description {
+    margin: 0 1.8rem 1.8rem;
+    position: relative;
+    &:before {
+      @extend .pseudo-block;
+      height: 100%;
+      border-left: 2px dashed #3f51b5;
+      position: absolute;
+      left: -1rem;
+    }
+  }
+}
+
+.date {
+  position: relative;
+  margin-left: 1.8rem;
+  font-size: $base-font-size + 0.2;
+  &:before {
+    content: "\f2c2";
+    font-family: FontAwesome;
+    font-size: $base-font-size - 0.2rem;
+    position: absolute;
+    left: -1.5rem;
+    top: 0.3125rem;
+  }
+}
+
+.role-tasks,
+.key-features {
+  span {
+    color: #3f51b5;
+    @extend strong;
+  }
+}
+
+// Inputs
+.form-field {
+  width: 100%;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  background: #fefaf5;
+  color: #3f51b5;
+  border: 0;
+  margin: 5px auto;
+}
+
+code {
+  &.link {
+    color: #3f51b5;
+  }
+}
+
+.signature {
+  font-style: italic;
+  padding-bottom: 8rem;
+  border-bottom: 1px dashed #3f51b5;
+}
